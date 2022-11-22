@@ -1,0 +1,182 @@
+line #1	   	  Divina Commedia: Inferno, I CANTO
+line #2	 
+line #3	 	  1.  1    Nel mezzo del cammin di nostra vita
+line #4	 	  1.  2    mi ritrovai per una selva oscura
+line #5		  1.  3    che' la diritta via era smarrita.
+line #6	 
+line #7	 	  1.  4      Ahi quanto a dir qual era e' cosa dura
+line #8	 	  1.  5    esta selva selvaggia e aspra e forte
+line #9	  	  1.  6    che nel pensier rinova la paura!
+line #10	 
+line #11   	  1.  7      Tant'e' amara che poco e' piu' morte;
+line #12   	  1.  8    ma per trattar del ben ch'i' vi trovai,
+line #13	  1.  9    diro' de l'altre cose ch'i' v'ho scorte.
+line #14	 
+line #15	  1. 10      Io non so ben ridir com'i' v'intrai,
+line #16	  1. 11    tant'era pien di sonno a quel punto
+line #17	  1. 12    che la verace via abbandonai.
+line #18	 
+line #19	  1. 13      Ma poi ch'i' fui al pie' d'un colle giunto,
+line #20	  1. 14    la' dove terminava quella valle
+line #21	  1. 15    che m'avea di paura il cor compunto,
+line #22	 
+line #23	  1. 16      guardai in alto, e vidi le sue spalle
+line #24  	  1. 17    vestite gia' de' raggi del pianeta
+line #25	  1. 18    che mena dritto altrui per ogne calle.
+line #26	 
+line #27	  1. 19      Allor fu la paura un poco queta
+line #28	  1. 20    che nel lago del cor m'era durata
+line #29	  1. 21    la notte ch'i' passai con tanta pieta.
+line #30	 
+line #31	  1. 22      E come quei che con lena affannata
+line #32	  1. 23    uscito fuor del pelago a la riva
+line #33	  1. 24    si volge a l'acqua perigliosa e guata,
+line #34	 
+line #35	  1. 25      cosi' l'animo mio, ch'ancor fuggiva,
+line #36	  1. 26    si volse a retro a rimirar lo passo
+line #37	  1. 27    che non lascio' gia' mai persona viva.
+line #38	 
+line #39	  1. 28      Poi ch'ei posato un poco il corpo lasso,
+line #40	  1. 29    ripresi via per la piaggia diserta,
+line #41	  1. 30    sì che 'l pie' fermo sempre era 'l piu' basso.
+line #42	 
+line #43	  1. 31      Ed ecco, quasi al cominciar de l'erta,
+line #44	  1. 32    una lonza leggiera e presta molto,
+line #45	  1. 33    che di pel macolato era coverta;
+line #46	 
+line #47	  1. 34      e non mi si partia dinanzi al volto,
+line #48	  1. 35    anzi 'mpediva tanto il mio cammino,
+line #49	  1. 36    ch'i' fui per ritornar piu' volte volto.
+line #50	 
+line #51	  1. 37      Temp'era dal principio del mattino,
+line #52	  1. 38    e 'l sol montava 'n su' con quelle stelle
+line #53	  1. 39    ch'eran con lui quando l'amor divino
+line #54	 
+line #55	  1. 40      mosse di prima quelle cose belle;
+line #56	  1. 41    sì ch'a bene sperar m'era cagione
+line #57	  1. 42    di quella fiera a la gaetta pelle
+line #58	  
+line #59	  1. 43      l'ora del tempo e la dolce stagione;
+line #60	  1. 44    ma non si' che paura non mi desse
+line #61	  1. 45    la vista che m'apparve d'un leone.
+line #62	 
+line #63	  1. 46      Questi parea che contra me venisse
+line #64	  1. 47    con la test'alta e con rabbiosa fame,
+line #65	  1. 48    si' che parea che l'aere ne tremesse.
+line #66	  
+line #67	  1  49      Ed una lupa, che di tutte brame     
+line #68	  1. 50    sembiava carca ne la sua magrezza,
+line #69	  1. 51    e molte genti fe' gia' viver grame,
+line #70	        
+line #71	  1. 52      questa mi porse tanto di gravezza
+line #72	  1. 53    con la paura ch'uscia di sua vista,
+line #73	  1. 54    ch'io perdei la speranza de l'altezza.
+line #74	 
+line #75	  1. 55      E qual e' quei che volontieri acquista,
+line #76	  1. 56    e giugne 'l tempo che perder lo face,
+line #77	  1. 57    che 'n tutti suoi pensier piange e s'attrista;
+line #78	 
+line #79	  1. 58      tal mi fece la bestia sanza pace,
+line #80	  1. 59    che, venendomi 'ncontro, a poco a poco
+line #81	  1. 60    mi ripigneva la' dove 'l sol tace.
+line #82	 
+line #83	  1. 61      Mentre ch'i' rovinava in basso loco,
+line #84	  1. 62    dinanzi a li occhi mi si fu offerto
+line #85	  1. 63    chi per lungo silenzio parea fioco.
+line #86	 
+line #87	  1. 64      Quando vidi costui nel gran diserto,
+line #88	  1. 65    "*Miserere* di me", gridai a lui,
+line #89	  1. 66    "qual che tu sii, od ombra od omo certo!".
+line #90	 
+line #91	  1. 67      Rispuosemi: "Non omo, omo gia' fui,
+line #92	  1. 68    e li parenti miei furon lombardi,
+line #93	  1. 69    mantoani per patria ambedui.
+line #94	 
+line #95	  1. 70    Nacqui *sub Iulio*, ancor che fosse tardi,
+line #96	  1. 71    e vissi a Roma sotto 'l buono Augusto
+line #97	  1. 72    nel tempo de li dei falsi e bugiardi.
+line #98	 
+line #99	  1. 73      Poeta fui, e cantai di quel giusto
+line #100	  1. 74    figliuol d'Anchise che venne di Troia,
+line #101	  1. 75    poi che 'l superbo Ilion fu combusto.
+line #102	 
+line #103	  1. 76      Ma tu perche' ritorni a tanta noia?
+line #104	  1. 77    perché non sali il dilettoso monte
+line #105	  1. 78    ch'e' principio e cagion di tutta gioia?".
+line #106	 
+line #107	  1. 79      "Or se' tu quel Virgilio e quella fonte
+line #108	  1. 80    che spandi di parlar sì largo fiume?",
+line #109	  1. 81    rispuos'io lui con vergognosa fronte.
+line #110	 
+line #111	  1. 82      "O de li altri poeti onore e lume
+line #112	  1. 83    vagliami 'l lungo studio e 'l grande amore
+line #113	  1. 84    che m'ha fatto cercar lo tuo volume.
+line #114	 
+line #115	  1. 85      Tu se' lo mio maestro e 'l mio autore;
+line #116	  1. 86    tu se' solo colui da cu' io tolsi
+line #117	  1. 87    lo bello stilo che m'ha fatto onore.
+line #118	 
+line #119	  1. 88      Vedi la bestia per cu' io mi volsi:
+line #120	  1. 89    aiutami da lei, famoso saggio,
+line #121	  1. 90    ch'ella mi fa tremar le vene e i polsi".
+line #122	 
+line #123	  1. 91      "A te convien tenere altro viaggio",
+line #124	  1. 92    rispuose, poi che lagrimar mi vide,
+line #125	  1. 93    "se vuo' campar d'esto loco selvaggio:
+line #126	 
+line #127	  1. 94      che' questa bestia, per la qual tu gride,
+line #128	  1. 95    non lascia altrui passar per la sua via, 
+line #129	  1. 96    ma tanto lo 'mpedisce che l'uccide;
+line #130	                                                         
+line #131	  1. 97      e ha natura si' malvagia e ria,
+line #132	  1. 98    che mai non empie la bramosa voglia,
+line #133	  1. 99    e dopo 'l pasto ha piu' fame che pria.
+line #134	 
+line #135	  1.100      Molti son li animali a cui s'ammoglia,
+line #136	  1.101    e piu' saranno ancora, infin che 'l veltro
+line #137	  1.102    verra', che la fara' morir con doglia.
+line #138	 
+line #139	  1.103      Questi non cibera' terra ne' peltro,
+line #140	  1.104    ma sapienza, amore e virtute,
+line #141	  1.105    e sua nazion sarà tra feltro e feltro.
+line #142	 
+line #143	  1.106      Di quella umile Italia fia salute
+line #144	  1.107    per cui mori' la vergine Cammilla,
+line #145	  1.108    Eurialo e Turno e Niso di ferute.
+line #146	 
+line #147	  1.109      Questi la caccera' per ogne villa,
+line #148	  1.110    fin che l'avra' rimessa ne lo 'nferno,
+line #149	  1.111    la' onde 'nvidia prima dipartilla.
+line #150	 
+line #151	  1.112      Ond'io per lo tuo me' penso e discerno
+line #152	  1.113    che tu mi segui, e io saro' tua guida,
+line #153	  1.114    e trarrotti di qui per loco etterno;
+line #154	 
+line #155	  1.115      ove udirai le disperate strida,
+line #156	  1.116    vedrai li antichi spiriti dolenti,
+line #157	  1.117    ch'a la seconda morte ciascun grida;
+line #158	 
+line #159	  1.118      e vederai color che son contenti
+line #160	  1.119    nel foco, perch' speran di venire
+line #161	  1.120    quando che sia a le beate genti.
+line #162	 
+line #163	  1.121      A le quai poi se tu vorrai salire,
+line #164	  1.122    anima fia a cio' piu' di me degna:
+line #165	  1.123    con lei ti lascero' nel mio partire;
+line #166	 
+line #167	  1.124      che' quello imperador che la' su' regna,
+line #168	  1.125    perch'i' fu' ribellante a la sua legge,
+line #169	  1.126    non vuol che 'n sua citta' per me si vegna.
+line #170	 
+line #171	  1.127      In tutte parti impera e quivi regge;
+line #172	  1.128    quivi e' la sua citta' e l'alto seggio:
+line #173	  1.129    oh felice colui cu' ivi elegge!".
+line #174	 
+line #175	  1.130      E io a lui: "Poeta, io ti richeggio
+line #176	  1.131    per quello Dio che tu non conoscesti,
+line #177	  1.132    accio' ch'io fugga questo male e peggio,
+line #178
+line #179	  1.133      che tu mi meni la' dov'or dicesti,
+line #180	  1.134    si' ch'io veggia la porta di san Pietro
+line #181	  1.135    e color cui tu fai cotanto mesti".
+line #182	  1.136    Allor si mosse, e io li tenni dietro.
