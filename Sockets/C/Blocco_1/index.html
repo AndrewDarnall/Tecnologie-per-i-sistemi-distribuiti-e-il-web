@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<style type="text/css">
+h1 {
+	font-family: sans-serif;
+	font-size: +105%;
+	margin-bottom: -6px;
+}
+h2 {
+	font-size: +100%;
+	margin-left: 5px;
+	margin-bottom: -12px;
+}
+h3 {
+	margin-left: 10px;
+	margin-bottom: -12px;
+}
+p {
+	margin-left: 10px;
+}
+br {
+	margin-left: 20px;
+}
+</style>
+<title>Esempi su socket in C/Unix</title>
+</head>
+<body>
+
+<h1>Istruzioni per la compilazione</h1><p>
+Per compilare il sorgente <tt><i>file</i>.c</tt>, 
+invocare: <tt>make <i>file</i></tt>
+<br>
+Il file <a href="Makefile">Makefile</a>
+definisce alcune dipendenze tenute in conto nella compilazione.
+</p>
+
+<hr size="3" width="100%">
+
+<h1>Semplice client/server <i>finger</i></h1><p>
+<a href="fingerc.c">fingerc.c</a>
+(usa <tt><a href="mkaddr.c">mkaddr()</a></tt>); si provi: 
+<tt>./fingerc directory.mit.edu smith > mit.log</tt><br>
+e si noti, in <tt>mit.log</tt>, come i byte vengono ricevuti a blocchi)<br>
+<a href="fingers.c">fingers.c</a> (Finger server: si provi,
+con il finger client <tt>fingerc</tt>, 
+a riprodurre l'effetto osservato con <tt>mit.edu</tt>)
+</p>
+
+<h1>Semplice client/server nel dominio Unix</h1><p>
+<a href="unclnt.c">unclnt.c</a>  
+<a href="unsrvr.c">unsrvr.c</a> (con gestione terminazione) 
+</p>
+
+
+<h1>IP addresses/names - Resolver/DNS</h1><p>
+
+<a href="mkaddr.c">mkaddr.c</a>
+(utility <tt>mkaddr()</tt> per la costruzione di 
+un indirizzo di socket nel dominio internet
+dati nome host e port)<br>
+
+<a href="../../../../../Materiale%20del%20corso/addrcnv.c">addrcnv.c</a> (usa <tt>inet_aton()</tt>)<br>
+<a href="../../../../../Materiale%20del%20corso/printaddr.c">printaddr.c</a> (routine per stampare una 
+<tt>struct hostent</tt> del resolver)<br>
+<a href="../../../../../Materiale%20del%20corso/byaddr.c">byaddr.c</a>
+<a href="../../../../../Materiale%20del%20corso/byname.c">byname.c</a> (semplici invocazioni della routine
+<tt>gethostby...()</tt> del <i>resolver</i>)<br>
+<a href="../../../../../Materiale%20del%20corso/gethost.c">gethost.c</a> (invoca le <tt>gethostby...()</tt>
+del <i>resolver</i>) 
+</p>
+
+<h1>Socket non bloccanti</h1><p>
+<a href="../../../../../Materiale%20del%20corso/nblksock.c">nblksock.c</a>
+</p>
+
+<h1>Semplici client-server nel dominio Internet</h1><p>
+<a href="../../../../../Materiale%20del%20corso/insrvr.c">insrvr.c</a><br>
+<a href="../../../../../Materiale%20del%20corso/inskelsrvr.c">inskelsrvr.c</a>, 
+insrvr.c semplificato con meno 
+controlli di errore, adatto per svolgere esercizi
+<br>
+<a href="../../../../../Materiale%20del%20corso/doserv.c">doserv.c</a>
+<a href="../../../../../Materiale%20del%20corso/inclnt.c">inclnt.c</a><br> 
+<a href="../../../../../Materiale%20del%20corso/getmsg.c">getmsg.c</a>
+<a href="../../../../../Materiale%20del%20corso/getmsgTout.c">getmsgTout.c</a>
+(ricezione bloccante, con tout (select()), non bloccante)
+</p>
+
+<h2>Server parallelo</h2><p>
+<a href="../../../../../Materiale%20del%20corso/inparsrvr.c">inparsrvr.c</a>
+</p>
+
+<h1>Applicazione client/server con socket</h1><p>
+<a href="../../../../../Materiale%20del%20corso/mboxclnt.c">mboxclnt.c</a> 
+<a href="../../../../../Materiale%20del%20corso/mboxsrvr.c">mboxsrvr.c</a>
+</p>
+
+<h1>Send e Receive: connectionless e non </h1><p>
+<a href="../../../../../Materiale%20del%20corso/sndrcvClessClnt.c">sndrcvClessClnt.c</a> 
+<a href="../../../../../Materiale%20del%20corso/sndrcvClessSrvr.c">sndrcvClessSrvr.c</a> <br>
+<a href="../../../../../Materiale%20del%20corso/sndrcvConnClnt.c">sndrcvConnClnt.c</a><br>
+<a href="../../../../../Materiale%20del%20corso/sndrcvConnClntStream.c">sndrcvConnClntStream.c</a>  
+<a href="../../../../../Materiale%20del%20corso/sndrcvConnSrvrStream.c">sndrcvConnSrvrStream.c</a><br>
+</p>
+
+<!--
+<h1>UDP- select/stili di ricezione</h1><p>
+<a href="udpclnt_nowait.c">udpclnt_nowait.c</a>
+<a href="udpclnt_select.c">udpclnt_select.c</a>
+</p>
+-->
+
+</body>
+</html>
