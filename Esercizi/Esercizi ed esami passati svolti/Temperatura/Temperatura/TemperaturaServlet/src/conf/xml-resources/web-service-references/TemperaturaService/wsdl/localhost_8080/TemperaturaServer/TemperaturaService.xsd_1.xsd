@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://server/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server/">
+
+<xs:element name="getAllTemperature" type="tns:getAllTemperature"/>
+
+<xs:element name="getAllTemperatureResponse" type="tns:getAllTemperatureResponse"/>
+
+<xs:element name="getTemperature" type="tns:getTemperature"/>
+
+<xs:element name="getTemperatureResponse" type="tns:getTemperatureResponse"/>
+
+<xs:complexType name="getAllTemperature">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllTemperatureResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTemperature">
+<xs:sequence>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTemperatureResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

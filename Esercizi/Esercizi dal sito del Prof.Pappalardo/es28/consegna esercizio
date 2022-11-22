@@ -1,0 +1,19 @@
+Scrivere un programma Java che conti il numero di periodi presenti nei tre libri della Divina Commedia, mostrandone i tre valori a computazione terminata.
+
+Il programma dovrà:
+
+    Effettuare una connessione con il server 192.168.45.4 port 80.
+    Inviare al server la richiesta: GET /pappalardo/provaTPCD/19.aux\n\n
+    Leggere il testo ricevuto una riga alla volta.
+    Utilizzando il metodo finiscePeriodo() descritto oltre, contare man mano il numero di periodi, distinguendo il conteggio per i tre libri.
+    Scrivere su standard output il numero calcolato per ciascun libro.
+
+In particolare:
+
+    Un periodo è inteso come una frase terminata da un carattere “punto” e può quindi estendersi su più righe del testo ricevuto.
+    Il metodo che valuta la presenza o meno del carattere punto in una riga di testo, sia finiscePeriodo(), è un metodo locale che restituisce true o false a seconda che la stringa passata come parametro contenga o no il carattere punto.
+    Il testo sarà inviato dal server in sequenza, cioè i tre libri saranno ricevuti in ordine. L'inizio di ciascun libro è identificato da una riga contenente il titolo soltanto, in caratteri maiuscoli, cioè INFERNO, PURGATORIO e PARADISO.
+
+
+     Parte facoltativa 1
+Rendere remoto il metodo finiscePeriodo(), utilizzando RMI e modificando il codice già scritto in modo che invochi la versione remota del metodo. 

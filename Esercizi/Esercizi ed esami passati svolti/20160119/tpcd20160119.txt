@@ -1,0 +1,21 @@
+TPCD 2016/01/19 Esercizio d’esame
+
+Il server di un sito di e-commerce mantiene le informazioni sulla disponibilità dei prodotti presenti in magazzino in pronta consegna. 
+
+Espone un servizio interrogabile tramite socket sulla porta 39999,
+che risponde a messaggi nel formato
+
+   id:n
+
+con id compreso tra 0 e 9 e con il carattere ‘:’ che fa da separatore, in cui un client chiede se sono presenti almeno n copie del prodotto con l’id indicato.
+
+Il server risponderà alla richiesta con la stringa 'True' o 'False' a seconda della disponibilità del prodotto riscontrata nel magazzino.
+
+
+Mentre il server funge da interfaccia per le richieste da parte dei client, le informazioni relative alla disponibilità dei prodotti viene mantenuta da un servizio separato, chiamato Magazzino. Questo verrà interrogato dal server usando RMI o RPC per soddisfare le richieste provenienti dal client. Il sistema avrà dunque la seguente struttura:
+
+Client ---socket---> Server ---RMI/RPC—> Magazzino 
+
+Scegliere liberamente la disponibilità dei 10 prodotti.
+
+Implementare il server e il magazzino testandoli con un semplice client o con telnet.

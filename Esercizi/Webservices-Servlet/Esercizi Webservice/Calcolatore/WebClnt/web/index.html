@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Servlet Calcolatore</title>
+    </head>
+    <body>
+    <center>
+        <h1>Servlet che richiama un WebService Calcolatore</h1>
+        <form action="http://localhost:8080/WebClnt/Calcolatore" method="post">
+            <p align="center"><input type="text" name="operando1"> <select name="operazione">
+<option value="+">+</option>
+<option value="-">-</option>
+                                <option value="*">*</option>
+<option value="/">/</option>
+                                <option value="%">%</option>
+                                <option value="^">^</option>
+</select> <input type="text" name="operando2"></p>
+            <p align="center"><input type="submit" name="pulsante" value="Calcola"></p>
+        </form>
+    </center>
+    </body>
+</html>

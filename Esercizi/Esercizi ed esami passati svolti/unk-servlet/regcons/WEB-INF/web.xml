@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>RegCons</servlet-name>
+		<servlet-class>regcons</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegCons</servlet-name>
+		<url-pattern>/login</url-pattern>
+		<url-pattern>/reg</url-pattern>
+		<url-pattern>/media</url-pattern>
+	</servlet-mapping>
+</web-app>

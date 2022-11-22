@@ -1,0 +1,19 @@
+Appello luglio 2012
+
+>>Server
+Implementare in Java o C un server che comunica tramite socket.
+
+Il server attende sul port 33333 e memorizza in ordine tutte le stringhe che riceve (di fatto nell'implementazione ci si può limitare a memorizzare solo le ultime 100, se lo si desidera).
+
+In risposta ad ogni nuova stringa proveniente da un client gli risponde con tutte le stringhe ricevute fino a quel momento (compresa l'ultima), con queste eccezioni:
+
+    a partire dalla quinta stringa memorizzata, il server risponderà: LIMITE RAGGIUNTO;
+    in risposta alla stringa RESET, il server azzera l'elenco delle stringhe memorizzate fino ad allora e risponde OK.
+
+Per collaudare il server implementato, si può comunicare con esso (sotto linux) con il comando:
+telnet localhost 33333
+
+>>Client (facoltativo)
+Si implementi in C o Java un cliente che riceve da standard input una stringa, la invia al server su localhost, port 33333 e infine attende da esso come risposta una stringa che visualizzerà sulla standard output.
+
+Durata della prova: 50 minuti

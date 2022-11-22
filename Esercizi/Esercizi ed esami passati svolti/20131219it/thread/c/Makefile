@@ -1,0 +1,5 @@
+LDFLAGS := -lpthread -lrt
+
+threads: threads.o
+clean:
+	rm -f *.o threads

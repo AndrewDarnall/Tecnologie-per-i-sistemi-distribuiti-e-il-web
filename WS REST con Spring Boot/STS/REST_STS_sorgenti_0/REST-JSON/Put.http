@@ -1,0 +1,9 @@
+PUT http://localhost:3000/api/exams HTTP/1.1
+content-type: application/json
+
+{
+    "id": 5,
+    "description": "Algebra",
+    "date": "2020-12-12T09:07:10"
+}
+

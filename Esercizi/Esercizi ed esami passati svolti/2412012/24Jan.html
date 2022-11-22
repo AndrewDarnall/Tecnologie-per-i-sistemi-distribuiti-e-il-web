@@ -1,0 +1,84 @@
+<html>
+<head>
+<style type="text/css">
+ul li {
+    margin: 1em;
+}
+ul ul li {
+    margin: 0.4em;
+}
+ul ul ul li {
+    margin: 0.2em;
+}
+h1 {
+    font-size: +120%;
+}
+
+</style>
+
+<title>Prova 24-1-2012</title>
+</head>
+
+<body>
+<H1>Prima parte (richiesta)</H1>
+
+Implementare in C o Java, su <samp>localhost</samp>,
+un programma server <samp>Poll</samp>, connection-oriented, che: 
+<ul>
+
+<li>accetti, su <samp>localhost</samp>, port <samp>7777</samp>, 
+i seguenti messaggi:</li>
+<ul>
+<li>
+<samp>[G]</samp> al quale il server riponder&agrave; con un 
+elenco di nomi di animali separati da virgole (sempre lo stesso);
+
+<br>
+<b>esempio</b>: <samp>cane,gatto,usignolo</samp>
+
+</li>
+
+<li>
+<samp>[V</samp><i>k</i><samp>]</samp>
+dove <i>k</i> &egrave; un intero; ci&ograve; costituisce un voto 
+di gradimento per l'animale in posizione <i>k</i> nell'elenco;
+<br>
+in risposta il server incrementer&agrave; il numero di voti espressi per 
+l'animale <i>k</i>; e invier&agrave; l'elenco degli animali, accompagnati 
+ciascuno dalla percentuale di voti espressi a suo favore fino 
+a quel momento;
+<br>
+<b>esempio</b>: <samp>cane:50%,gatto:25%,usignolo:25%</samp>
+
+<p>
+se <i>k</i> non &egrave; una posizione valida nell'elenco, 
+il voto si considera nullo e il server risponde con
+<samp>ERROR</samp>
+</p>
+</li>
+</ol>
+</li>
+
+
+</ul>
+<li>
+Il server risponder&agrave; <samp>ERROR</samp>
+a ogni altro dato ricevuto.
+</li>
+
+</ul>
+
+
+<H1>Seconda parte (facoltativa)</H1>
+Scrivere un programma client che permetta di inviare comandi al server descritto.
+<p>
+<B>NB:</B> il server pu&ograve; comunque essere collaudato con il comando:
+<br>
+<samp>telnet localhost 7777</samp>
+</p>
+
+<h1>Tempo disponibile per la prova: 60 minuti</h1>
+
+</body>
+</html>
+

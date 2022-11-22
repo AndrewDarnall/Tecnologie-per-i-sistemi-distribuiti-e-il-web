@@ -1,0 +1,50 @@
+# Makefile for All
+# + fix
+
+# Parameters
+
+CLIENT = IDL_client_cserv
+SERVER = IDL_server
+CCLIENT = client
+
+SOURCES_CLNT.c = 
+SOURCES_CLNT.h = 
+SOURCES_SVC.c = 
+SOURCES_SVC.h = 
+SOURCES.x = IDL.x
+
+TARGETS_SVC.c = IDL_svc.c IDL_server.c
+TARGETS_CLNT.c = IDL_clnt.c server.c
+TARGETS = IDL.h IDL_clnt.c IDL_svc.c server.c IDL_server.c
+
+OBJECTS_CLNT = $(SOURCES_CLNT.c:%.c=%.o) $(TARGETS_CLNT.c:%.c=%.o)
+OBJECTS_SVC = $(SOURCES_SVC.c:%.c=%.o) $(TARGETS_SVC.c:%.c=%.o)
+# Compiler flags 
+
+CFLAGS += -O3 -I/usr/include/tirpc
+LDLIBS += -lnsl -ltirpc
+RPCGENFLAGS =
+
+# Targets 
+
+all : $(CLIENT) $(SERVER) $(CCLIENT)
+
+$(TARGETS) : $(SOURCES.x) 
+	rpcgen $(RPCGENFLAGS) $(SOURCES.x)
+
+$(OBJECTS_CLNT) : $(SOURCES_CLNT.c) $(SOURCES_CLNT.h) $(TARGETS_CLNT.c) 
+
+$(OBJECTS_SVC) : $(SOURCES_SVC.c) $(SOURCES_SVC.h) $(TARGETS_SVC.c) 
+
+$(CLIENT) : $(OBJECTS_CLNT) 
+	$(LINK.c) -o $(CLIENT) $(OBJECTS_CLNT) $(LDLIBS) 
+
+$(SERVER) : $(OBJECTS_SVC) 
+	$(LINK.c) -o $(SERVER) $(OBJECTS_SVC) $(LDLIBS)
+
+$(CCLIENT):
+	gcc client.c -o client
+
+clean:
+	 $(RM) *.o $(CLIENT) $(SERVER) $(CCLIENT)
+

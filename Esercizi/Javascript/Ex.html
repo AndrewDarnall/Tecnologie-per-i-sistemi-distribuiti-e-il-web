@@ -1,0 +1,94 @@
+<!-- Coded By Helias (Stefano Borzì) -->
+
+<select OnChange="options_menu(this.value)">
+<option value="0">--</option>
+<option value="1">Costruisci tabella da DB</option>
+<option value="2">Alert clienti</option>
+<option value="3">Tabella città</option>
+</select>
+
+<div id="box"></div>
+
+<script>
+var data = "";
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function()
+{
+	if (this.readyState == 4 && this.status == 200)
+		data = JSON.parse(this.responseText);
+};
+xhttp.open("GET", "http://globus.dmi.unict.it/~fmessina/TSDW/DB.json", true);
+xhttp.send();
+
+function options_menu(val) {
+	var el = document.getElementById("myTable");
+	if (el)
+		el.parentNode.removeChild(el);
+
+	var keys = Object.keys(data[0]);
+	var rows = data.length;
+	var columns = Object.keys(data[0]).length;
+
+	var table = document.createElement("table");
+	var header = table.createTHead();
+	var tbody = table.createTBody();
+	table.id = "myTable";
+	table.setAttribute("border", "1");
+
+	if (val == 1) {
+		// thead
+		var row = header.insertRow(0);
+		var cell;
+
+		for (var i = 0; i < columns; i++) {
+			cell = row.insertCell(0);
+			cell.innerHTML = "<b>" + keys[columns-i-1] + "</b>";
+		}
+
+		// tbody
+		var row;
+		for (var i = 0; i < rows; i++) {
+			row = tbody.insertRow(i);
+
+			for (var j = 0; j < columns; j++)
+				row.insertCell(j).innerHTML = data[i][keys[j]];
+		}
+
+		document.getElementById("box").appendChild(table);
+	}
+	else if (val == 2) {
+
+		var text = "";
+		for (var i = 0; i < data.length; i++)
+			text += data[i]["nome"] + " " + data[i]["cognome"] + "\n";
+
+		alert(text);
+	}
+	else if (val == 3) {
+		// thead
+		var row = header.insertRow(0);
+		var cell;
+
+		cell = row.insertCell(0);
+		cell.innerHTML = "<b>Acquisti</b>";
+		cell = row.insertCell(1);
+		cell.innerHTML = "<b>Città</b>";
+
+		// tbody
+		var row, count = 0;
+		for (var i = 0; i < data.length; i++) {
+
+			for (var j = 0; j < data[i]["acquisti"].length; j++) {
+				row = tbody.insertRow(count);
+				row.insertCell(0).innerHTML = data[i]["acquisti"][j];
+				row.insertCell(1).innerHTML = data[i]["citta"];
+				
+				count++;
+			}
+		}
+
+		document.getElementById("box").appendChild(table);		
+	}
+}
+</script>

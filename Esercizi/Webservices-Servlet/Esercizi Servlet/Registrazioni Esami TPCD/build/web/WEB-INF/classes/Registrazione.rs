@@ -1,0 +1,2 @@
+NullParamsException
+Registrazione

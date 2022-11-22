@@ -1,0 +1,15 @@
+L'esercizio può essere svolto in C o Java.
+
+Implementare due distinti servizi remoti (usando, a scelta dello studente, o RPC/C o RMI/Java per entrambi), che esportino, rispettivamente, le seguenti funzioni/metodi:
+
+    hash(s,n) che, applicata a una stringa s, calcoli e restituisca la somma modulo n dei codici (ASCII o UniCode) dei caratteri di s;
+    ask(ip,port,msg) che (in assenza di errori/eccezioni):
+        apra una connessione su socket stream verso l'IP ip, port port
+        invii sulla connessione la stringa msg, seguita da due "\n"
+        applichi, a ogni riga s ricevuta in risposta man mano sulla connessione, la funzione/metodo remoto hash(s,30)
+        restituisca il valore piÃ¹ frequente calcolato con hash() sulle varie righe ricevute.
+
+Scrivere un client che, tramite la funzione/metodo remoto ask():
+
+    apra una connessione di tipo stream verso l'IP 151.97.252.4, port 80, inviandogli la stringa "GET /pappalardo/prova/18.aux",
+    scriva su console il valore ottenuto in risposta.

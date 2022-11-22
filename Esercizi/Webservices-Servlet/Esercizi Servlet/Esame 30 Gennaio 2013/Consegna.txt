@@ -1,0 +1,4 @@
+In un file di testo vengono memorizzati dei messaggi inviati dagli utenti, implementare le seguenti funzionalità:
+
+Scrivi messaggio (String username, String messaggio)
+Leggi n-esimo messaggio (String username, int n)

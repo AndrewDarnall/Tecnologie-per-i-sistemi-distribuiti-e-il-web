@@ -1,0 +1,21 @@
+Appello TPCD dicembre 2012
+
+Implementare un server (C o Java) che si comporti come segue.
+
+Server
+
+    resta in attesa di dati sul port 33333
+    continua a leggere dati, nella forma XX...XNN...N, in cui:
+        XX...X è una sequenza di caratteri non cifra
+        NN...N è una sequenza di cifre (da 0 a 9)
+    il server effettua la somma delle cifre contenute in NN...N, sia somma
+    il server mantiene un numero che rappresenta la somma totale di tutte le richieste ricevute
+    risponde al client con la nuova somma ottenuta con il messaggio ricevuto (somma totale + somma)
+    chiude la connessione con il client e torna in attesa di connessioni al punto 1
+
+
+Implementare un client in grado di comunicare con il server di cui sopra.
+
+Quesito facoltativo. Rendere il server in grado di servire in parallelo più richieste da parte di clienti multipli.
+
+Durata della prova: 60 minuti 

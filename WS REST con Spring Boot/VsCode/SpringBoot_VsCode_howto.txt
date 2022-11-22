@@ -1,0 +1,270 @@
+[Grazie a Davide Scalisi] 
+
+CTRL + SHIFT + p  -> Apre palette (console)
+Per creare un nuovo progetto scrivere init e scegliere Spring Initializr: Create Maven Project
+
+Package e' il nome del pacchetto:	tsdw.portal
+Artifact e' il nome del progetto:	portal
+
+Dipendenze da scegliere:
+	Spring Web
+	MySQL Driver
+	Spring Data JPA
+	Validation
+
+I file importanti sono:
+	src/main/java/tsdw/portal/portal/portalApplication.java	->	Contiene il main, quindi il punto da dove il servizio viene avviato dal WebContainer.
+	src/main/resources/application.properties								->	Contiene informazioni di connessione al DB ed impostazioni varie del WebContainer.
+	pom.xml																									->	Contine info sulle dipendenze del progetto e sulla versione di Java utilizzata.
+
+I relativi snippet per application.properties sono:
+	Dall'estensione Spring Boot Snippets:
+		spring-mysql	->	Genera il codice di base per la connessione al DB.
+											Si deve decommentare spring.jpa.hibernate.ddl-auto=update.
+											Bisogna manualmente aggiungere server.port, che e' la porta del WebContainer.
+											Bisogna aggiungere anche spring.datasource.initialization-mode=always,
+											che si trova scrivendo initializ.
+	
+	Custom:
+		spring-basics	->	Genera il codice corretto di spring-mysql.
+
+I file importanti relativi al progetto sono:
+	src/main/java/tsdw/portal/portal/Appello.java						->	Classe entity associata alla singola istanza dell'entita' appello.
+	src/main/java/tsdw/portal/portal/AppelloRepository.java	->	Interfaccia relativa all'entita' appello che estende CrudRepository.
+	src/main/java/tsdw/portal/portal/AppelloService.java		->	Classe che implementa metodi query-like per interagire con il repository.
+	src/main/java/tsdw/portal/portal/AppelloController.java	->	Classe che implementa il collegamento tra gli URL REST ed i vari service.
+
+I relativi snippet sono:
+	Appello.java:
+		Dall'estensione Spring Boot Snippets:
+			spring-entity	->	Genera il codice per la descrizione di un'entita.
+												Si deve specificare il tipo della chiave primaria.
+												Successivamente, si specificano tutti gli attributi
+												dell'entita ed i vari constrain e si generano tutti i
+												getters, setters ed il toString tramite la Generator GUI.
+	
+	AppelloRepository.java:
+		Dall'estensione Spring Boot Snippets:
+			spring-jparepo	->	Genera il codice per ereditare da CrudRepository tutte le operazioni CRUD.
+													I parametri del template sono la classe dell'entity ed il tipo della chiave primaria.
+
+	AppelloService.java:
+		Custom:
+			spring-service	->	Genera il codice per la creazione di operazioni query-like.
+
+	AppelloController.java:
+		Dall'estensione Spring Boot Snippets:
+			spring-crudctrl		->	Genera il codice necessario per il collegamento tra gli URL REST ed i vari service.
+														Si devono sistemare un po' di cose.
+		Custom:
+			spring-controller	->	spring-crudctrl sistemato.
+
+	Per mandare richieste creare un file richiesta.http ed inserire:
+		GET http://localhost:3000/Appello
+		Content-Type: application/json
+
+		Oppure
+
+		POST http://localhost:3000/Appello
+		Content-Type: application/json
+
+		{
+			"description":"appello bellissimo4",
+			"date":"2020-12-16T17:00:00"
+		}
+
+Informazioni su i 4 file Java
+	Persona.java:
+		Classe che definisce l'entity Persona, quindi la struttura di una singola tupla della tabella.
+		Se parliamo di persone, allora la classe si chiamera' persona.java in quanto, quando sara'
+		istanziata, conterra' tutti i dati relativi ad una singola tupla.
+		Principalmente serve a contenere risultati di query del service/repository, ad impacchettare
+		parametri da dare ai metodi del service/repository e come elemento di ritorno dai vari metodi
+		di un controller.
+
+	PersonaRepository.java:
+		E' un'interfaccia che eredita da CrudRepository il codice necessario alle operazioni CRUD
+		di base, che poi sono quelle che vanno a tradursi in vere e proprie query al momento dell'esecuzione;
+		esempi sono save(persona), findById(id), deleteById(id), findAll().
+		Questa interfaccia e' quella che si andra' ad interfacciare al database tramite Spring, che
+		pensera' poi a tradurre le operazioni CRUD in SQL.
+		Tutte le query (costruite da insiemi di operazioni CRUD e specificate nel service), passeranno
+		sempre per le chiamate a questa interfaccia, che e' da considerarsi come una sorta di endpoint
+		verso il DB.
+		Un'altro modo di vedere un repository e' quello di tabella nella sua interezza, a differenza
+		dell'entity che serve a contenere solo una tupla della tabella.
+
+	PersonaService.java:
+		Classe che contiene un riferimento alla relativa interfaccia PersonaRepository ed implementa
+		operazioni piu' complesse delle normali operazioni CRUD, operazioni che sono l'equivalente di
+		una determinata query descritta tramite la programmazione funzionale.
+		Dentro questa classe dovremmo aggiungere il nostro codice Java in base alla query che si dovra' eseguire.
+		Dentro la classe, se piu' avanti avremo bisogno dell'accesso a determinate operazione CRUD del repository,
+		dovremmo definire delle chiamate ai metodi che si servono del repository tramite nomi piu' specifici;
+		ad esempio invece di save(persona), avremo il metodo salvaPersona(p){ return repository.save(p) }.
+		Ovviamente, per operazioni piu' complesse che rappresenteranno le query, definiremo il metodo
+		con il nome che rappresentera' lo scopo della query stessa e come istruzioni useremo una serie di
+		istruzioni in programmazione funzionale che ci permetteranno di restituire il risultato della query
+		(un po' come usare del PL/SQL piu' complesso, in quanto abbiamo tutto Java come nostro linguaggio
+		di manipolazione ed interrogazione dei dati).
+	
+	PersonaController:
+		Classe che contiene un riferimento al relativo service: tramite questo riferimento riusciamo
+		da un lato ad accedere (non necessariamente, dipende dal codice) ai metodi CRUD "ridenominati"
+		dal service stesso ed agli altri metodi query-like, che serviranno ad ottenere determinate liste di
+		tuple rappresentanti il risultato della query tramite List<Persona>, a singole Persona, o addirittura
+		ai valori singoli degli attributi di Persona.
+		Una volta ottenuto l'accesso a questi valori tramite il riferimento al service, il vero scopo di questa
+		classe e' quello di descrivere e rappresentare in runtime un endpoint per l'applicazione web: la classe
+		infatti, continene varie mappature a URL sia per la classe stessa, sia per i suoi metodi.
+		L'URL della classe rappresentera' il punto d'accesso alla risorsa; ogni metodo della classe rappresentera'
+		una diversa operazione query-like del service e sara' mappato non solo tramite una sotto-URL della classe,
+		ma anche tramite il metodo HTTP in base a cui la classe viene invocata dal web.
+		Tramite il controller, riusciamo a creare un endpoint che i frontend potranno interrogare per ottenere
+		i dati nel formato scelto da noi.
+		Come da standard si parla di REST ed una volta ritornati da ogni metodo del controller una Persona, una
+		List<Persona> o un qualsiasi altro dato che Spring sapra' interpretare e tradurre, questo sara' automaticamente
+		tradotto in JSON da Spring, in modo da rendere per il frontend la risposta comprensibile, in quanto non
+		possiamo pensare di ritornare una classe Java come elemento impacchettato in un body HTTP...
+
+Note su Spring Boot:
+Il framework svolge i seguenti compiti:
+	1)	Interfaccia con il Frontend tramite la traduzione in JSON delle classi Java.
+	2)	Interfaccia con il DB, tramite l'esecuzione di uno o piu' metodi CRUD.
+	3)	Collegamento tra i vari elementi delle 4 classi tramite le annotazioni, specialmente @autowired.
+	4)	Mappatura URL e gestione protocollo HTTP tramite le annotazioni presenti nel controller.
+
+Snippets Custom:
+
+"Spring service": {
+	"scope": "java",
+	"prefix": "spring-service",
+	"body": [
+		"package ${1:packageName};",
+		"",
+		"import java.util.ArrayList;",
+		"import java.util.List;",
+		"import java.util.Optional;",
+		"",
+		"import org.springframework.beans.factory.annotation.Autowired;",
+		"import org.springframework.stereotype.Service;",
+		"",
+		"@Service",
+		"public class ${2:entityName}Service {",
+		"",
+		"\t@Autowired",
+		"\tprivate $2Repository repository;",
+		"",
+		"\tpublic $2 add$2($2 e) {",
+		"\t\treturn repository.save(e);",
+		"\t}",
+		"",
+		"\tpublic Optional<$2> get$2(${4:EntityIdType} id) {",
+		"\t\treturn repository.findById(id);",
+		"\t}",
+		"",
+		"\tpublic $2 update$2($2 e) {",
+		"\t\treturn repository.save(e);",
+		"\t}",
+		"",
+		"\tpublic void delete$2($4 id) {",
+		"\t\trepository.deleteById(id);",
+		"\t}",
+		"",
+		"\tpublic List<$2> getAll() {",
+		"\t\treturn repository.findAll();",
+		"\t}",
+		"$0",
+		"}"
+	]
+},
+"Spring controller": {
+	"scope": "java",
+	"prefix": "spring-controller",
+	"body": [
+		"package ${1:packageName};",
+		"",
+		"import java.util.List;",
+		"import java.util.Optional;",
+		"import java.net.URISyntaxException;",
+		"import java.net.URI;",
+		"",
+		"import javax.validation.Valid;",
+		"",
+		"import org.springframework.beans.factory.annotation.Autowired;",
+		"import org.springframework.http.ResponseEntity;",
+		"import org.springframework.web.bind.annotation.DeleteMapping;",
+		"import org.springframework.web.bind.annotation.GetMapping;",
+		"import org.springframework.web.bind.annotation.PostMapping;",
+		"import org.springframework.web.bind.annotation.PutMapping;",
+		"import org.springframework.web.bind.annotation.PathVariable;",
+		"import org.springframework.web.bind.annotation.RequestBody;",
+		"import org.springframework.web.bind.annotation.RequestMapping;",
+		"import org.springframework.web.bind.annotation.RestController;",
+		"",
+		"@RestController",
+		"@RequestMapping(\"/$2\")",
+		"public class $2Controller {",
+		"\t",
+		"\t@Autowired",
+		"\tprivate ${2:EntityName}Service service;",
+		"\t",
+		"\t@GetMapping",
+		"\tpublic ResponseEntity<List<$2>> getAll() {",
+		"\t\tList<$2> list = service.getAll();",
+		"\t\treturn ResponseEntity.ok().body(list);",
+		"\t}",
+		"\t",
+		"\t@GetMapping(\"/{id}\")",
+		"\tpublic ResponseEntity<$2> get$2(@PathVariable Long id) {",
+		"\t\tOptional<$2> e = service.get$2(id);",
+		"",
+		"\t\tif(e.isPresent())",
+		"\t\t\treturn ResponseEntity.ok().body(e.get());",
+		"\t\treturn ResponseEntity.notFound().build();",
+		"\t}",
+		"\t",
+		"\t@PostMapping",
+		"\tpublic ResponseEntity<$2> add$2(@Valid @RequestBody $2 e) throws URISyntaxException {",
+		"\t\tif(e.getId() != null)",
+		"\t\t\treturn ResponseEntity.badRequest().build();",
+		"",
+		"\t\t$2 entity = service.add$2(e);",
+		"\t\treturn ResponseEntity.created(new URI(\"/api/$2/\" + entity.getId())).body(entity);",
+		"\t}",
+		"\t",
+		"\t@PutMapping",
+		"\tpublic ResponseEntity<$2> update$2(@Valid @RequestBody $2 e) {",
+		"\t\tif(e.getId() == null)",
+		"\t\t\treturn ResponseEntity.badRequest().build();",
+		"",
+		"\t\t$2 entity = service.update$2(e);",
+		"\t\treturn ResponseEntity.ok().body(entity);",
+		"\t}",
+		"\t",
+		"\t@DeleteMapping(\"/{id}\")",
+		"\tpublic ResponseEntity<Void> delete$2(@PathVariable Long id) {",
+		"\t\tif(!service.get$2(id).isPresent())",
+		"\t\t\treturn ResponseEntity.badRequest().build();",
+		"",
+		"\t\tservice.delete$2(id);",
+		"\t\treturn ResponseEntity.ok().build();",
+		"\t}",
+		"$0",
+		"}",
+	]
+},
+"Spring basics": {
+	"scope": "spring-boot-properties",
+	"prefix": "spring-basics",
+	"body": [
+		"spring.datasource.url=jdbc:mysql://${1:databaseHost}:3306/${2:databaseName}",
+		"spring.datasource.username=${3:username}",
+		"spring.datasource.password=${4:password}",
+		"spring.jpa.hibernate.ddl-auto=update",
+		"spring.datasource.initialization-mode=always",
+		"",
+		"server.port=${5:webServerPort}",
+		""
+	]
+}

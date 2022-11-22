@@ -1,0 +1,4 @@
+Realizzare un server che tiene traccia della disponibilità di 10 libri, che possono essere disponibili o in prestito;
+	riceve delle richieste da parte dei client del tipo "titolo del libro"
+	e risponde "Disponibile", "In prestito" o "Inesistente" a seconda del titolo richiesto.
+
