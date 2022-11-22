@@ -16,11 +16,11 @@ Repo di riferimento del modulo di Tecnologie per i sistemi distribuiti e il web 
 
 ## Risorse aggiuntive:
 
-- [Appunti del corso {makapx}](https://github.com/makapx/appunti-TSDW)
+- [Appunti del corso {da makapx}](https://github.com/makapx/appunti-TSDW)
 
 ## Testi consigliati:
 
-- [(IT)Programmare in Java](https://www.amazon.it/Programmare-MyLab-Contenuto-digitale-accesso/dp/8891916218/ref=sr_1_1?__mk_it_IT=ÅMÅŽÕÑ&crid=3H8RRXPRF5QBU&keywords=Programmare+in+Java+deitel&qid=1669153975&qu=eyJxc2MiOiIwLjY2IiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&sprefix=programmare+in+java+deitel%2Caps%2C102&sr=8-1)
+- [(IT) Programmare in Java](https://www.amazon.it/Programmare-MyLab-Contenuto-digitale-accesso/dp/8891916218/ref=sr_1_1?__mk_it_IT=ÅMÅŽÕÑ&crid=3H8RRXPRF5QBU&keywords=Programmare+in+Java+deitel&qid=1669153975&qu=eyJxc2MiOiIwLjY2IiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&sprefix=programmare+in+java+deitel%2Caps%2C102&sr=8-1)
 - [(US) Java How to program, early objects, 11th ed.](https://www.amazon.com/Java-Program-Early-Objects-Deitel/dp/0134743350/ref=sr_1_1?crid=3FRX7JW46TLOU&keywords=java+how+to+program+early+objects+11th+edition&qid=1669154053&sprefix=Java+how+to+program+ea%2Caps%2C198&sr=8-1)
 - [Javadoc](https://docs.oracle.com/javase/tutorial/)
 - [Jakarta Tutorial](https://eclipse-ee4j.github.io/jakartaee-tutorial/)
