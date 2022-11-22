@@ -1,0 +1,17 @@
+{
+    "Spring Boot MySQL db": {
+        "prefix": [
+            "spring-mysql"
+        ],
+        "body": [
+            "#server.port=3000",
+            "",
+            "spring.datasource.url=jdbc:mysql://${1:host}:${2:port}/${3:db_name}?serverTimezone=Europe/Rome",
+            "spring.datasource.username=${4:username}",
+            "spring.datasource.password=${5:password}",
+            "spring.jpa.hibernate.ddl-auto=update",
+            "spring.datasource.initialization-mode=always"
+        ],
+        "description": "Spring Boot datasource properties for a mysql database."
+    }
+}

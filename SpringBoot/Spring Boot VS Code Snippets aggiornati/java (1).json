@@ -1,0 +1,52 @@
+// Solo snippet per il Service
+
+{
+    
+    "Spring CRUD Service": {
+        "prefix": [
+            "spring-service"
+        ],
+        "body": [
+            "import java.util.ArrayList;",
+            "import java.util.List;",
+            "import java.util.Optional;",
+            "",
+            "import org.springframework.beans.factory.annotation.Autowired;",
+            "import org.springframework.stereotype.Service;",
+            "",
+            "@Service",
+            "public class ${1:EntityName}Service {",
+            "",
+            "\t@Autowired",
+            "\tprivate ${1:EntityName}Repository repository;",
+            "",
+            "\tpublic ${1:EntityName} add${1:EntityName}(${1:EntityName} e) {",
+            "\t\treturn repository.save(e);",
+            "\t}",
+            "",
+            "\tpublic Optional<${1:EntityName}> get${1:EntityName}(${2:entityIdType} id) {",
+            "\t\treturn repository.findById(id);",
+            "\t}",
+            "",
+            "\tpublic List<${1:EntityName}> getAll${1:EntityName}s() {",
+            "\t\tList<${1:EntityName}> output = new ArrayList<${1:EntityName}>();",
+            "\t\trepository.findAll().forEach(output::add);",
+            "\t\treturn output;",
+            "\t}",
+            "",
+            "\tpublic ${1:EntityName} update${1:EntityName}(${1:EntityName} e) {",
+            "\t\treturn repository.save(e);",
+            "\t}",
+            "",
+            "\tpublic void delete${1:EntityName}(${1:EntityName} e) {",
+            "\t\trepository.delete(e);",
+            "}",
+            "",
+            "\tpublic void delete${1:EntityName}(${2:entityIdType} id) {",
+            "\t\trepository.deleteById(id);",
+            "\t}",
+            "}"
+        ],
+        "description": "Spring service that implements the CRUD operations"
+    }
+}

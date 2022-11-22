@@ -1,0 +1,32 @@
+{
+	// Place your snippets for spring-boot-properties here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Spring Boot MySQL db": {
+        "prefix": [
+            "spring-mysql"
+        ],
+        "body": [
+            //"spring.datasource.url=jdbc:mysql://${1:host}:${2:port}/${3:db_name}?serverTimezone=Europe/Rome",
+            "spring.datasource.url=jdbc:mysql://localhost:3306/${3:db_name}?serverTimezone=Europe/Rome",
+            "spring.datasource.username=root",
+            "spring.datasource.password=",
+            "spring.jpa.hibernate.ddl-auto=update",
+            "spring.sql.init.mode=always",
+            "#spring.datasource.initialization-mode=always #(deprecato)",
+            "",
+            "server.port=3000"
+        ],
+        "description": "Spring Boot datasource properties for a mysql database."
+    }
+}
