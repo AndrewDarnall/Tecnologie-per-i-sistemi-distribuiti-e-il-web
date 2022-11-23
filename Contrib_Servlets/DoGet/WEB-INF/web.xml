@@ -1,0 +1,19 @@
+<web-app>
+    <servlet>
+        <servlet-name>staticPageExample</servlet-name>
+        <servlet-class>StaticPage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>staticPageExample</servlet-name>
+        <url-pattern>/getPage</url-pattern>
+    </servlet-mapping>
+</web-app>
+<!-- 
+    Questo file .xml e' fondamentale per collegare la classe della servlet
+    al nome, e il nome al pattern url che useremo per 'invocare' la servlet
+
+    quindi, se hostiamo il servlet engine Tomcat localmente(localhost) una volta 
+    fatto partire usando l'apposito script ./startup.sh (nel caso di Linux), Tomcat
+    nel browser metteremo -> [localhost:8080/DoGet/greet]
+
+-->
