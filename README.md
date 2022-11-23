@@ -25,8 +25,6 @@ Repo di riferimento del modulo di Tecnologie per i sistemi distribuiti e il web 
 - [Javadoc](https://docs.oracle.com/javase/tutorial/)
 - [Jakarta Tutorial](https://eclipse-ee4j.github.io/jakartaee-tutorial/)
 
-<<<<<<< HEAD
-=======
 ## Link utili:
 
 - [Tutorial HTML](https://www.w3schools.com/html/default.asp)
@@ -35,7 +33,6 @@ Repo di riferimento del modulo di Tecnologie per i sistemi distribuiti e il web 
 - [Documentazione Docker](https://docs.docker.com)
 - [Documentazione Apache Tomcat](https://tomcat.apache.org/tomcat-8.5-doc/index.html)
 
->>>>>>> main
 <!--- Questo e' il template/facade del corso con cui collegare altre risorse, all'inizio del nuovo anno si puo' spostare tutto
       in un branch nuovo e crearne un altro con pressoche' gli stessi contenuti o meglio, cambiare il REAMDE.md e manipolare 
       i contenuti gia esistenti.
