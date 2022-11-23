@@ -1,5 +1,5 @@
 /**
- * - Server_A 
+ * - Server_B
  * Soluzione proposta -> Andrew R. Darnall
  * 
  */
@@ -7,7 +7,7 @@ import java.io.*;
 import java.net.*;
 import java.nio.Buffer;
 
-public class Server_A {
+public class Server_B {
 
     private static final int PORT = 3333;
 
@@ -35,8 +35,9 @@ public class Server_A {
             out = new PrintWriter(s.getOutputStream(), true);
 
             String msg = in.readLine();
+            System.out.println("From client:\t" + msg);
 
-            out.print(msg + "\r\n");
+            out.print("OK\r\n");
 
 
         } catch(IOException e) {
