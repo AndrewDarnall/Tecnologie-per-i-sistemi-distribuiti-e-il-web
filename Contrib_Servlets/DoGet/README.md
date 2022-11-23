@@ -1,4 +1,6 @@
-Primo passo, scaricare Apache Tomcat versione 9 -> (https://tomcat.apache.org/download-90.cgi)
+# DoGet - Servlet
+
+Primo passo, scaricare [Apache Tomcat versione 9](https://tomcat.apache.org/download-90.cgi)
 scegliere il formato del download, .zip, .tar etc
 dopo aver decompresso il file scaricato (nel caso di Linux, windows dovrebbe avere un installer/wizzard)
 entrare nella directory di tomcat/bin/ ed eseguire lo script di avvio, ./startup.sh
