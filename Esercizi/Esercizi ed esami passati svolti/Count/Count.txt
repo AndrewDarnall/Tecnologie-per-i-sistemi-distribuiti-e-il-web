@@ -1,5 +1,0 @@
-Thread (C e Java)
-Una variabile intera x, inizializzata a 0, è condivisa tra due thread A e B. Entrambi i cercano di incrementare x, usando la variabile locale cnt per tener traccia del numero di volte in cui l’incremento ha avuto successo.
-Quando x supera il valore 300, i thread terminano la loro esecuzione mostrando il proprio valore di cnt.
-Il programma termina quando tutti i thread hanno terminato la loro esecuzione. Implementare il sistema descritto proteggendo opportunamente la variabile x dagli accessi concorrenti ed introducendo dei tempi di attesa casuali tra le operazioni eseguite dai singoli thread.
-

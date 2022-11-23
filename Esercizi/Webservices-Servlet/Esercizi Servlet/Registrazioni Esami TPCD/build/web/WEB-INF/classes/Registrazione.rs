@@ -1,2 +1,0 @@
-NullParamsException
-Registrazione

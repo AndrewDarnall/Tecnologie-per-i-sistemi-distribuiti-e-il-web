@@ -1,4 +1,0 @@
-il client si trova in ../socket
-
-struttura:
-	client <-> server <-> IDL_server
