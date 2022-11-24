@@ -1,4 +1,4 @@
-# Version Java
+# Versione Java
 
 La complicazione di questa versione stava nel pensare in oggetti.
 La soluzione ha 4 classi, Main, Thread1, Thread2 e Shared.
