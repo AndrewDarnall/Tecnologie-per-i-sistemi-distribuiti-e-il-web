@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CookerBooker</title>
+        <style>
+            * { font-family: 'Courier New', Courier, monospace; }
+            #greetingHeader { text-align: center; }
+            #wrapper { border: 1px solid black; border-radius: 25px; padding: 25px;}
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <h1 id="greetingHeader">Welcome to the coooker booker page!</h1>
+
+            <div id="wrapper">
+                <form id="mainForm" action="./sendInfo" method="POST">
+                    
+                    <input type="radio" name="language" value="C++">C++ for dummies<br>
+                    <input type="radio" name="language" value="Java">Java is the best<br>
+                    <input type="radio" name="language" value="Python">Python2 vs Python3 what's new?<br>
+                    <input type="radio" name="language" value="Haskell">Haskell and the superiority of functional programming languages<br>
+                    <input type="radio" name="language" value="Erlang">Erlang and the awsomeness of the langauge<br>
+                    <input type="radio" name="language" value="Brainfuck">Brainf**k - The forbidden language<br>
+                    <input type="reset" value="Reset Form"><br>
+                    <input type="submit" value="submit"><br>
+
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
