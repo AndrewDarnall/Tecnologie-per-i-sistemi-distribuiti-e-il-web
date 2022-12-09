@@ -30,7 +30,7 @@ public class PeopleTracker extends HttpServlet {
 
         String clicked = request.getParameter("button");
 
-        Cookie cookie = new Cookie("user",getStringClick());
+        Cookie cookie = new Cookie("connection_" + getStringClick(),getStringClick());
 
         response.addCookie(cookie);
 
@@ -50,7 +50,9 @@ public class PeopleTracker extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         if(cookies != null && cookies.length != 0) {
-            out.println(cookies[0].getValue());
+            //out.println(cookies[0].getValue());
+            int va = cookies.length;
+            out.println(va);
         } else {
             out.println("<p>This is the first time the user visits the website!</p>");
         }
