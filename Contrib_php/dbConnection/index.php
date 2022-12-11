@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <style>
-            * {font-family: 'Courier New', Courier, monospace;}
-            #greeterHeader {text-align: center;}
-        </style>
-    </head>
-    <body>
-        <div id="main">
-            <h1 id="greeterHeader">Welcome to a simple example to database connection</h1>
-            <?php
+	<head>
+		<title> PHP Welcome page </title>
+	</head>
+	<body>
+		<div id="main">
+			<?php 
+					
+				echo "Greetings from the php module, ciao Giovanni!<br>";
 
-                echo "Welcome to the page";
+				$addr = "localhost";
+				$user = "gb";
+				$password = "gb";
+				$dbName = "Libri";
 
-                $servername = "localhost";
-                $username = "gb";
-                $password = "gb";
+				$conn = new mysqli($addr,$user,$password,$dbName);
 
-                // Creating the connection
-                $conn = new mysqli($servername, $username, $password);
+				if($conn->connect_error) {
+					die("Database connection error!" . connect_error);
+				} 
 
-                // Check connections
-                if($conn->connect_error) {
-                    die("Connection faild: " . $conn->connect_error);
-                }
+				echo "Successfully connected to the  MySQL database with addres: " . $addr . "\tand username:\t" . $user;
 
-                echo "DataBase connection succesful!";
+				// Preparing to execute a query
+				$sql = "select * from libri";
+				
+				// Equivalent to the Java result set
+				$results = $conn->query($sql);
 
-            ?>
-        </div>
-    </body>
+				echo "<br><br>";
+
+				echo "<h1 style=\"text-align:center;\"> Our collection of Books </h1><br><br>";
+
+				if($results->num_rows > 0) {
+					while($row = $results->fetch_assoc()) {
+						echo "id:\t" . $row['id'] . "\tname:\t" . $row['name'] . "<br>";
+					}
+				} else {
+					echo "<p>There are currently no books in the collection</p><br>";
+				}
+
+				$conn->close();
+
+			?>
+		</div>
+	</body>
 </html>
