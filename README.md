@@ -33,6 +33,11 @@ Repo di riferimento del modulo di Tecnologie per i sistemi distribuiti e il web 
 - [Documentazione Docker](https://docs.docker.com)
 - [Documentazione Apache Tomcat](https://tomcat.apache.org/tomcat-8.5-doc/index.html)
 
+## Documentazione e Tutorials su Package Managers:
+
+- [Maven ~ Java](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
+- [Composer ~ php](https://getcomposer.org/doc/01-basic-usage.md)
+- [Npm ~ JavaScript](https://docs.npmjs.com/about-npm)
 <!--- Questo e' il template/facade del corso con cui collegare altre risorse, all'inizio del nuovo anno si puo' spostare tutto
       in un branch nuovo e crearne un altro con pressoche' gli stessi contenuti o meglio, cambiare il REAMDE.md e manipolare 
       i contenuti gia esistenti.
