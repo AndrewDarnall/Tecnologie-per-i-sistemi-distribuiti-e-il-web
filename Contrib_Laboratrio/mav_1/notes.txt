@@ -1,0 +1,5 @@
+~~~~ Maven notes ~~~~
+
+I would've used a jupyter notebook but it is currently 1:00 A.M. on a sunday....
+
+
