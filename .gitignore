@@ -1,0 +1,5 @@
+# Might not be necessary for the project but I read that it is good practice
+# to exclude config files
+
+.vscode
+.idea

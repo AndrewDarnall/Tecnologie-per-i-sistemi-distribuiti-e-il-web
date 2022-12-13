@@ -3,3 +3,31 @@
 I would've used a jupyter notebook but it is currently 1:00 A.M. on a sunday....
 
 
+- groupId: unique identifyer of the organization
+- artifactId: name of the jar without a version
+- archetypeArtifactId: the type of archetype to use in Maven
+- archetypeVersion: the version of the archetype
+
+--> After studying the Prof. Nictora's slides better and with more documentation
+    I can say that Maven ... is .... COOL ! and VERY powerful, DEFINITELY the proper
+    way to write code, because it solves SOO many problems
+
+--> Checkout maven goals! {some are not necessairly bound to a compilation phase} 
+
+
+To create the archetype for the servlet: -> maven webapp archetype
+
+specific command:
+
+- mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4
+
+servlet_one is the by product of this operation
+
+After successful configuration and code-writing, run: mvn build
+
+A messed up web.xml causes the servlet to NOT deploy!
+
+Maven can also automate A LOT of things that easy the DevOps philosphy
+
+This first part has been a short overview of the manual building and deploying
+of a servlet, without including the Docker deployment phase.
