@@ -1,0 +1,23 @@
+<!-- JPA persistance config file -->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+    <persistence-unit name="def">
+        <class>Student</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost/Students"/>
+            <property name="jakarta.persistence.jdbc.user" value="gb"/>
+            <property name="jakarta.persistence.jdbc.password" value="gb"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+
+<!-- 
+    Naturalmente le informazioni vitali come il db, la passwod e l'utente vanno tenuti in file separati e NON quelli che verranno caricati
+    o comunque le variabili usate saranno salvate in apposite variabili di ambiente. {good security}
+
+    la classe Servlt.java fa chiamate anche a questo file!
+-->
