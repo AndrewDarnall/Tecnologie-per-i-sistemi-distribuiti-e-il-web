@@ -9,9 +9,14 @@
     $nRows = $result->num_rows;
 
     if($nRows > 0) {
-        $row = $result->fetch_assoc();
-        // $film = $arr[rand(0, $nRows)];
-        echo "<p> " . $row['titolo'] . " - " . $row['regista'] . " </p><br><br>";
+        $ran = rand(0, $nRows - 1);
+        $i = 0;
+        while($row = $result->fetch_assoc()) {
+            if($i == $ran) {
+                echo "<p> " . $row['titolo'] . " - " . $row['regista'] . " </p><br><br>";
+            }
+            $i += 1;
+        }
     } else {
         echo "<p class=\"error\"> No films present in the database! </p><br><br>";
     }
