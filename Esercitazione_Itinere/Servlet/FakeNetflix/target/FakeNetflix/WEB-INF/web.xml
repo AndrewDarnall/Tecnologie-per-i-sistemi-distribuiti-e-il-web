@@ -8,8 +8,21 @@
     <servlet-name>FakeF</servlet-name>
     <servlet-class>FakeFlix</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>Complete</servlet-name>
+    <servlet-class>Completed</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>FakeF</servlet-name>
     <url-pattern>/showHome</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Complete</servlet-name>
+    <url-pattern>/completed</url-pattern>
+  </servlet-mapping>
 </web-app>
+<!--
+
+  The order MATTERS for the two servlet mappings!
+
+ -->

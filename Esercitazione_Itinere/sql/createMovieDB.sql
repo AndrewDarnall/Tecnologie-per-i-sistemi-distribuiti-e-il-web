@@ -15,6 +15,8 @@ create table if not exists wlist
     regista varchar(30)    
 );
 
+create user if not exists 'gb'@localhost identified by 'gb';
+
 -- La consegna non specifica alcun vincolo di integrita'
 
 -- Granting privileges
@@ -22,4 +24,4 @@ create table if not exists wlist
 grant select on myDB.* to 'gb'@localhost;
 grant insert on myDB.* to 'gb'@localhost;
 
--- Lo script presuppone la esistenza di credenziali per l'accesso moderato al DB
+-- Accertatevi di usare lo script come root 
