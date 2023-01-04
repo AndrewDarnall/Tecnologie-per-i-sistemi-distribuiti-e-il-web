@@ -10,7 +10,7 @@ public class FakeFlix extends HttpServlet {
 
     private Connection aConn = null;
     // Accertatevi che le credenziali siano corrette per l'utente e che abbiate i diritti corretti per il db
-    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/myDB";
+    private static final String DATABASE_URL = "jdbc:mysql://localhost/myDB";
     private Properties info = null;
 
     public void init() {
@@ -240,5 +240,8 @@ public class FakeFlix extends HttpServlet {
  * 
  * Da notare come le servlets gestiscono eventi in maniera notevolmente piu' elegante -> ottimo per
  * la programmazione ad eventi
+ * 
+ * 
+ * NOTA BENE --> Le operazioni sono dipendenti dalla tabella e dal tipo di DB creato
  * 
  */
