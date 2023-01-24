@@ -11,7 +11,7 @@ Repo di riferimento del modulo di Tecnologie per i sistemi distribuiti e il web 
 
 # Laboratorio (Prof. Nicotra):
 
-- [GitHub repo](https://github.com/unict-dmi-tswd-lab)
+- [GitHub repo](https://github.com/unict-dmi-tsdw-lab)
 
 
 ## Risorse aggiuntive:
