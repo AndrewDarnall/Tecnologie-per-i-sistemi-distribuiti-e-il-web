@@ -1,0 +1,32 @@
+<!-- Try changing the model's bundle to see how the binding changes -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Andrew's Book Store</title>
+        <style>
+            * {text-align: center;} table, tr, td, th {width: 100%;} th, tr, td {margin: 15px;}
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <h1>Welcome to Andrew's Books Sotre Page!</h1>
+            <br><br>
+            <table>
+                <tr>
+                    <th>TITLE</th>
+                    <th>AUTHOR</th>
+                    <th>RATING</th>
+                    <th>PRICE</th>
+                </tr>
+                <!-- Template engine magic! -->
+
+                <!-- the template layout system iterates through types -->
+                <tr th:each="book:${books}">
+                    <td th:text="${book.title}">title</td>
+                    <td th:text="${book.author}">author</td>
+                </tr>
+            </table>
+
+        </div>
+    </body>
+</html>

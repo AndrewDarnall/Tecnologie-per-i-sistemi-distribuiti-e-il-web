@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title> Student Thymeleaf Template </title>
+        <style>
+            * { text-align: center; }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <h1> Welcome to this Thymeleaf template! </h1>
+            <br><br>
+            <h2> Gathering information on the students </h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                </tr>
+                <!-- Enjoy the template engine's magic! -->
+                <tr th:each="student:${students}" >
+                    <td th:text="${student.id}">id</td>
+                    <td th:text="${student.name}">Name</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
