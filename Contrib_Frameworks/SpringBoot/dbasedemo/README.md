@@ -7,7 +7,7 @@ semplice da utilizzare rispetto a Spring, anche se come ha detto saggiamente il 
 ## Dipendenze usate
 
 - Thymeleaf
-- Spring JDBC Tamplate
+- Spring JDBC Template
 
 ### Spiegazione 
 
