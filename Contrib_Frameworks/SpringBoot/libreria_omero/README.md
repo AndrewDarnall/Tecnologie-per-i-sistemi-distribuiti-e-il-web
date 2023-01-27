@@ -7,6 +7,14 @@ Sostanzialmente ho:
 - sostituito il codice JDBCTemplate con quello JPARepository (un solo file) 
 - creato qualche template in piu'
 
+# Users
+
+- user:password
+- guest:guest
+- drew\_00:deus\_vult
+
+Per modificare le credenziali, aggiungete / copiate quello che trovate nel file src/main/java/com/omero/libreria\_omero/config/WebSecurityConfig.java
+
 # Tips
 
 - Sfruttare le annotazioni rende la vita piu' semplice
